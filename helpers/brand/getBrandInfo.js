@@ -22,6 +22,7 @@ exports.getBrandInfo = async function (config, brandSlug) {
         Accept: "application/json",
         "X-Auth-Token": config.api.storeApiToken,
         "X-Auth-Client": config.api.storeApiClientId,
+        "Access-Control-Allow-Origin": "*",
       },
     }
   );
