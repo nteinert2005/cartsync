@@ -24,6 +24,7 @@ exports.getBrandInfo = async function (config, brandSlug) {
         "X-Auth-Client": config.api.storeApiClientId,
         "Access-Control-Allow-Origin": "*",
       },
+      mode: "no-cors",
     }
   );
 

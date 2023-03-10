@@ -1,4 +1,5 @@
 const { getBrandInfo } = require("../helpers/brand/getBrandInfo");
+const { test } = require("../helpers/brand/test");
 
 class CartSync {
   constructor(config) {
@@ -10,10 +11,15 @@ class CartSync {
       storeApiClientId: config.storeApiClientId,
     };
     this.brandInfo = "";
+    this.test = test;
   }
 
   async getBrand(brandSlug) {
-    this.brandInfo = await getBrandInfo(this, brandSlug);
+    const { info, products } = await getBrandInfo(this, brandSlug);
+    this.brandInfo = {
+      info: info,
+      products: products,
+    };
   }
 }
 
