@@ -11,7 +11,6 @@ class CartSync {
       storeApiClientId: config.storeApiClientId,
     };
     this.brandInfo = "";
-    this.test = test();
   }
 
   async getBrand(brandSlug) {
